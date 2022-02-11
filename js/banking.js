@@ -20,6 +20,14 @@ document.getElementById('deposit-btn').
         const depositInput = document.getElementById('deposit-input');
         const depositInputText = depositInput.value;
         const newDepositAmount = parseFloat(depositInputText);
-        console.log(newDepositAmount);
+        //set banalnec
+        const depositTotal = document.getElementById('deposit-total');
+        const previousDepositText = depositTotal.innerText;
+        const previousDepositTotalAmount = parseFloat(previousDepositText)
+        const newDepositTotalAmount = newDepositAmount + previousDepositTotalAmount;
+
+        depositTotal.innerText = newDepositTotalAmount;
+        depositInput.value = '';
+        //console.log(newDepositAmount);
 
     });
