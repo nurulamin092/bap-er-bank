@@ -15,6 +15,11 @@
 
     }); */
 
-document.getElementById('deposit-btn').addEventListener('click', function () {
-    console.log('Bimillah');
-});
+document.getElementById('deposit-btn').
+    addEventListener('click', function () {
+        const depositInput = document.getElementById('deposit-input');
+        const depositInputText = depositInput.value;
+        const newDepositAmount = parseFloat(depositInputText);
+        console.log(newDepositAmount);
+
+    });
