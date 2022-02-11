@@ -75,6 +75,12 @@ document.getElementById('withdraw-btn').
         withdrawTotal.innerText = previousWithdrawTotalAmount;
         withdrawInput.value = '';
 
+        const balanceTotal = document.getElementById('balance-total');
+        const balanceTotalText = balanceTotal.innerText;
+        const totalaBalanceAmount = parseFloat(balanceTotalText)
+        const currentBalance = totalaBalanceAmount - newWithdrawInputAmount;
+        balanceTotal.innerText = currentBalance;
+
 
 
         //console.log(newWithdrawInputAmount);
