@@ -45,6 +45,7 @@ document.getElementById('deposit-btn').
         const previousDepositTotal = previousDepositTotalAmount + newDepositInputAmount;
         depositTotal.innerText = previousDepositTotal;
         depositInputAmount.value = '';
+
         //Balance total 
 
         const balanceTotal = document.getElementById('balance-total');
@@ -52,6 +53,8 @@ document.getElementById('deposit-btn').
         const totalaBalanceAmount = parseFloat(balanceTotalText);
         const totalBalance = totalaBalanceAmount + newDepositInputAmount;
         balanceTotal.innerText = totalBalance;
+        // depositInputAmount.value = '';
+
         // console.log(depositTotal);
     });
 
@@ -61,7 +64,20 @@ document.getElementById('withdraw-btn').
     addEventListener('click', function () {
         console.log('Bilsmillah hir Rahmanir R-him');
 
+        const withdrawInput = document.getElementById('withdraw-input');
+        const newWithdrawInputText = withdrawInput.value;
+        const newWithdrawInputAmount = parseFloat(newWithdrawInputText);
+
+        const withdrawTotal = document.getElementById('withdraw-total');
+        const previousWithdrawTotalText = withdrawTotal.innerText;
+        const previousWithdrawTotal = parseFloat(previousWithdrawTotalText);
+        const previousWithdrawTotalAmount = previousWithdrawTotal + newWithdrawInputAmount;
+        withdrawTotal.innerText = previousWithdrawTotalAmount;
+        withdrawInput.value = '';
+
+
+
         //console.log(newWithdrawInputAmount);
-
-
+        //new code
     });
+
