@@ -14,7 +14,7 @@
         // console.log(newDepositAmount);
 
     }); */
-
+/*
 document.getElementById('deposit-btn').
     addEventListener('click', function () {
         const depositInput = document.getElementById('deposit-input');
@@ -29,5 +29,39 @@ document.getElementById('deposit-btn').
         depositTotal.innerText = newDepositTotalAmount;
         depositInput.value = '';
         //console.log(newDepositAmount);
+
+    }); */
+
+
+document.getElementById('deposit-btn').
+    addEventListener('click', function () {
+        console.log("Bismillah Heer Rahmair R-him");
+        const depositInputAmount = document.getElementById('deposit-input');
+        const newDepositInputText = depositInputAmount.value;
+        const newDepositInputAmount = parseFloat(newDepositInputText)
+        const depositTotal = document.getElementById('deposit-total');
+        const previousTotalAmountText = depositTotal.innerText;
+        const previousDepositTotalAmount = parseFloat(previousTotalAmountText);
+        const previousDepositTotal = previousDepositTotalAmount + newDepositInputAmount;
+        depositTotal.innerText = previousDepositTotal;
+        depositInputAmount.value = '';
+        //Balance total 
+
+        const balanceTotal = document.getElementById('balance-total');
+        const balanceTotalText = balanceTotal.innerText;
+        const totalaBalanceAmount = parseFloat(balanceTotalText);
+        const totalBalance = totalaBalanceAmount + newDepositInputAmount;
+        balanceTotal.innerText = totalBalance;
+        // console.log(depositTotal);
+    });
+
+//withdraw 
+
+document.getElementById('withdraw-btn').
+    addEventListener('click', function () {
+        console.log('Bilsmillah hir Rahmanir R-him');
+
+        //console.log(newWithdrawInputAmount);
+
 
     });
